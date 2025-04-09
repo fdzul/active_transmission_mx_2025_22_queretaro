@@ -1,0 +1,37 @@
+---
+title: "Programa de Prevención & Control del Dengue | 2025"
+format: 
+  dashboard:
+      nav-buttons: [twitter, github, facebook]
+theme: custom.scss
+---
+
+```{r setup}
+library(sf)
+mapview::mapviewOptions(default = TRUE,
+                        basemaps.color.shuffle = FALSE)
+load("/Users/felipedzul/Library/CloudStorage/OneDrive-Personal/proyects/geocoding_mex/2025/8.RData/denmex_2025.RData")
+library(magrittr)
+```
+
+
+# [**Mapas de Calor**]{style="font-size:8pt"}
+
+::: panel-tabset
+
+### [**Santiago de Querétaro**]{style="color:#990000"}
+```{r heatmap_queretaro}
+densnv::mp_heatmap(geocoded_datasets = z,
+                   cve_edo = "22",
+                   locality = "Santiago de Querétaro",
+                   status_caso = c(1, 2),
+                   week = c(1:53),
+                   zoom = NULL,
+                   map_type = NULL,
+                   alpha = 0.6,
+                   static = FALSE,
+                   palette = viridis::turbo)
+```
+
+
+:::
