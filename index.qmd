@@ -34,4 +34,36 @@ densnv::mp_heatmap(geocoded_datasets = z,
 ```
 
 
+### [**Jalpa de Serra**]{style="color:#990000"}
+```{r heatmap_jalpa_serra}
+densnv::mp_heatmap(geocoded_datasets = z,
+                   cve_edo = "22",
+                   locality = "Jalpa de Serra",
+                   status_caso = c(1, 2),
+                   week = c(1:53),
+                   zoom = NULL,
+                   map_type = NULL,
+                   alpha = 0.6,
+                   static = FALSE,
+                   palette = viridis::turbo)
+```
+
+
+### [**Toliman**]{style="color:#990000"}
+```{r heatmap_toliman}
+densnv::mp_heatmap(geocoded_datasets = z,
+                   cve_edo = "22",
+                   locality = "Toliman",
+                   status_caso = c(1, 2),
+                   week = c(1:53),
+                   zoom = NULL,
+                   map_type = NULL,
+                   alpha = 0.6,
+                   static = FALSE,
+                   palette = viridis::turbo)
+```
+
+
+
+
 :::
